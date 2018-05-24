@@ -1,3 +1,26 @@
 page-home {
-
+   
 }
+
+
+.ion-alpha-sidebar {
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    z-index: 50000;
+    margin: 10px 0px;
+  }
+  .ion-alpha-sidebar li {
+    flex: 1 1 auto;
+    list-style: none;
+    width: 40px;
+    text-align: center;
+  }
+  .ion-alpha-sidebar li a {
+    font-size: 16px;
+  }
+  .ion-alpha-sidebar li a.selected {
+    font-weight: bold;
+    font-size: 20px;
+  }

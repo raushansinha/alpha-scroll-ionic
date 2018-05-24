@@ -1,0 +1,15 @@
+.align-right {
+    text-align-last: right ;
+    top: 56px;
+    height: 484px;
+    touch-action: pan-x;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    z-index: 50000;
+    margin: 10px 0px;
+}

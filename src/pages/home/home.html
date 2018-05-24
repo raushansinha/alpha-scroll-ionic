@@ -1,14 +1,13 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+    <ion-scroll class="ion-alpha-scroll" [ngStyle]="calculateScrollDimensions()" scrollX="false" scrollY="true">
+        <ion-item-group *ngFor="let group of groupedContacts">
+          <ion-item-divider id="scroll-letter-{{group.letter}}" light>{{group.letter}}</ion-item-divider>
+          <ion-item *ngFor="let contact of group.contacts">{{contact.name}}</ion-item>
+        </ion-item-group>
+      </ion-scroll>
+      <ul class="ion-alpha-sidebar" [ngStyle]="calculateDimensionsForSidebar()">
+        <li *ngFor="let letter of firstLetterList" tappable (click)="navigateToLatter(letter)">
+          <a id="sidebar-letter-{{letter}}">{{letter}}</a>
+        </li>
+      </ul>
 </ion-content>

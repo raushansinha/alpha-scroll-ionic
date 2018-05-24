@@ -7,13 +7,18 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { AlphaBarComponent } from '../alpha-bar/alpha-bar.component';
+import { PipesModule } from '../pipes/pipes.module';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    AlphaBarComponent
   ],
   imports: [
     BrowserModule,
+    PipesModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -24,6 +29,7 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    AlphaBarComponent,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
